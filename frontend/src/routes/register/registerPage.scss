@@ -1,0 +1,139 @@
+@import "../../responsive";
+
+.Register{
+    display: flex;
+  height: 100%;
+.textContainer{
+    flex: 3;
+    .wrapper{
+        padding-right : 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        height: 100%;
+        @include sm{
+            justify-content: flex-start;
+        }
+        @include md{
+            padding: 0;
+        }
+        .tag{
+            font-style: italic;
+            color: gray;
+            font-weight: bolder;
+            text-decoration: underline;
+        }
+        .title{
+            font-size: 64px;
+            font-weight: bolder;
+            width: 100%;
+            @include lg{
+             font-size: 48px;
+            }
+        }
+        .boxes{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            // justify-content: center;
+            input{
+                width: 100%;
+                margin: 20px;
+                padding: 25px;
+                border-radius: 6px;
+              border: solid 2px gray;
+              font-size: larger;
+}
+               .regbut{
+                    padding: 20px;
+                    width: 100%;
+                     color: white;
+                     background-color: rgb(72, 130, 119);
+                     border: none;
+                     font-weight: bolder;
+
+                }
+                .regbut:hover{
+                    cursor: pointer;
+                }
+            @include sm{
+                display: initial;
+            }
+        
+            h1{
+                font-size: 36px;
+               
+            }
+            h2{
+                font-size: 20px ;
+                font-weight: 300;
+            }
+        }
+    }
+}
+.error{
+    margin-bottom: 7px;
+    padding: 5px;
+    color: red;
+}
+.loading-msg {
+  color: gray;
+  font-size: 14px;
+  padding: 10px;
+}
+.loading-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #ccc;
+  border-top: 3px solid #555;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.loading-text {
+  font-size: 15px;
+  color: #555;
+  font-weight: 500;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.imgContainer{
+    flex: 2;
+    background-color: rgba(178, 198, 225,0.7);
+    position: relative;
+    display: flex;
+    align-items: center;
+    img{
+        width: 115%;
+        position: absolute;
+        right: 0%;
+    }
+    @include md{
+        display: none;
+    }
+    @include lg{
+        width: 105%;
+        
+    }
+}
+}

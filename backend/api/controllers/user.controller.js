@@ -39,10 +39,11 @@ export const updateUser=async(req,res)=>{
         data:{
             ...inputs,
             ...(updatedPassword && {password:updatedPassword}),
-            ...(avatar&&{avatar})
+           ...(typeof avatar === "string" ? { avatar } : {})
+
         }
       })
-      const{password:userPassword,...rest}=updateUser
+      const{password:userPassword,...rest}=updatedUser
      return res.status(200).json(rest)
     }catch(err){
         console.log(err)
