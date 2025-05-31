@@ -68,11 +68,17 @@ form{
         }
      
     }
+    a{
+        flex: 1;
+        background-color: #264653;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
     button{
         border: none;
         cursor: pointer;
         background-color: #264653;
-        flex: 1;
         img{
             width: 24px;
             height: 24px;
@@ -82,4 +88,4 @@ form{
         }
     }
 }
-}
+}}
