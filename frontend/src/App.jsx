@@ -12,7 +12,7 @@ import Login from "./routes/login/login.jsx";
 import Register from "./routes/register/registerPage.jsx";
 import ProfileUpdatePage from "./routes/profileUpdatePage/profileUpdatePage.jsx";
 import NewPostPage from "./routes/newPostPage/newPostPage.jsx";
-import { listPageLoader, singlePageLoader } from "./lib/loaders.js";
+import { listPageLoader, profilePageLoader, singlePageLoader } from "./lib/loaders.js";
 function App() {
    
     const router=createBrowserRouter([{
@@ -47,7 +47,8 @@ function App() {
         element:<RequireAuth/>,
         children:[   {
         path:"/profile",
-        element:<ProfilePage/>
+        element:<ProfilePage/>,
+        loader:profilePageLoader
       },
       {
         path:"/profile/update",

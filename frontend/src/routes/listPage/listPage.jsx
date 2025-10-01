@@ -20,7 +20,7 @@ function ListPage(){
                     <Await
           resolve={data.postResponse}
           errorElement={
-            <p>Error loading package location!</p>
+            <p>Error loading posts!</p>
           }
         >
           {(postResponse) => (
@@ -37,7 +37,7 @@ function ListPage(){
                     <Await
           resolve={data.postResponse}
           errorElement={
-            <p>Error loading package location!</p>
+            <p>Error loading posts!</p>
           }
         >
           {(postResponse) => (

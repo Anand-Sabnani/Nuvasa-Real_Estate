@@ -3,10 +3,13 @@ import { Link } from "react-router-dom"
 import { useState } from "react"
 import { useContext } from "react"
 import { AuthContext } from "../../context/AuthContext"
+import { useNotificationStore } from "../../lib/notificationStore"
 function Navbar(){
     const [open,setOpen]=useState(false)
     const {currentUser}=useContext(AuthContext)
-     
+     const fetch=useNotificationStore((state)=>state.fetch)
+      const number = useNotificationStore((state) => state.number);
+ fetch();
     return (
         <nav>
         <div className="left">
@@ -25,7 +28,7 @@ function Navbar(){
           <img src={currentUser.avatar || "/noavatar.jpg"} />
           <span>{currentUser.username}</span>
           <Link to="/profile" className="profile">
-          <div className="notification">3</div>
+            {number>0&&<div className="notification">{number}</div>} 
            <span>Profile</span>
           </Link>
         </div>): (<><Link to={`/login`}>Sign In</Link>
