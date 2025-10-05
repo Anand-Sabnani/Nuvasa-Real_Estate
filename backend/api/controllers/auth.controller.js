@@ -63,7 +63,7 @@ export const login=async(req,res)=>{
       }).status(200).json(userInfo)
 
     }catch(err){
-        console.log(first)
+        console.log(err)
         res.status(500).json({message:"failed to login!"})
     }
 };
