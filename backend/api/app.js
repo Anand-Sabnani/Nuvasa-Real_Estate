@@ -10,7 +10,7 @@ import cors from 'cors'
 const app=express();
 app.use(cookieParser())
 app.use(express.json());
-app.use(cors({origin: process.env.CLIENT_URL,credentials:true}))
+app.use(cors({origin:"https://nuvasa-real-estate-lx47.vercel.app/",credentials:true}))
 app.use("/api/auth",authRoute)
 app.use("/api/users",userRoute)
 app.use("/api/posts",postRoute)
